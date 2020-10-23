@@ -26,6 +26,7 @@ String picName;
 void setup (){
   size (750, 750);
   dotR = 20;
+  // Number of dots which appear (30 by default)
   numberOfDots = 30;
   
   d = new Dot (numberOfDots);
@@ -39,7 +40,7 @@ void setup (){
 void draw(){
    
   if (gameOver){
-    picName = String.valueOf(day()) + "_" + String.valueOf(month()) + "_" + String.valueOf(year()) + "_" + "Player1_" + String.valueOf(d.p1Triangles.size()) + "_" + "Player2_" + String.valueOf(d.p2Triangles.size()) + ".png";
+    picName = "screenshots/" + String.valueOf(day()) + "_" + String.valueOf(month()) + "_" + String.valueOf(year()) + "__" + "Player1_" + String.valueOf(d.p1Triangles.size()) + "__" + "Player2_" + String.valueOf(d.p2Triangles.size()) + ".png";
     save(picName);
     background(200);
     stop();
